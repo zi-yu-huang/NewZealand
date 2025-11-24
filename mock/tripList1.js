@@ -1,6 +1,6 @@
-import Pukaki from "~/assets/src/Lake Pukaki.jpg";
-import Dunedin from "~/assets/src/Dunedin.jpg";
-import DeerPark from "~/assets/src/DeerPark.jpg";
+import Pukaki from "/images/trip_itinerary/Lake Pukaki.jpg";
+import Dunedin from "/images/trip_itinerary/Dunedin.jpg";
+import DeerPark from "/images/trip_itinerary/DeerPark.jpg";
 
 const tripList1 = [
   {

@@ -12,7 +12,7 @@ const items = computed<NavigationMenuItem[]>(() => [
   {
     label: "Components",
     to: "/docs/components",
-    // active: route.path.startsWith("/docs/components"),
+    active: route.path.startsWith("/docs/components"),
   },
   {
     label: "Figma",

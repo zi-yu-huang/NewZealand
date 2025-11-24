@@ -90,20 +90,20 @@ onMounted(() => {
       <img
         class="img01 absolute w-[150vw] h-full max-w-none object-cover"
         style="top: -9%"
-        src="../assets/src/newImg01.jpg"
+        src="/images/banner_img/newImg01.jpg"
         alt="Picture 1"
       />
 
       <img
         class="img02 absolute w-[150vw] h-full object-cover max-w-none"
         style="top: 56%; left: -35%; transform: translateY(-50%); scale: 120%"
-        src="../assets/src/newImg02.png"
+        src="/images/banner_img/newImg02.png"
         alt="Picture 2"
       />
 
       <img
         class="img03 absolute w-[150vw] h-full max-w-none lawn"
-        src="../assets/src/newImg03.png"
+        src="/images/banner_img/newImg03.png"
         alt="Picture 3"
       />
 
