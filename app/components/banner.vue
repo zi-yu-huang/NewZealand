@@ -35,7 +35,7 @@ const runSequenceAnimation = () => {
   );
 
   // 假設原程式碼中 pic1 為 img01，如果 pic1 真的存在，請自行調整
-  // tl.to( ".pic1", { ~. } );
+  // tl.to( ".pic1", { ... } );
 
   tl.to(
     ".title_new",
@@ -90,20 +90,20 @@ onMounted(() => {
       <img
         class="img01 absolute w-[150vw] h-full max-w-none object-cover"
         style="top: -9%"
-        src="~/assets/src/newImg01.jpg"
+        src="../assets/src/newImg01.jpg"
         alt="Picture 1"
       />
 
       <img
         class="img02 absolute w-[150vw] h-full object-cover max-w-none"
         style="top: 56%; left: -35%; transform: translateY(-50%); scale: 120%"
-        src="~/assets/src/newImg02.png"
+        src="../assets/src/newImg02.png"
         alt="Picture 2"
       />
 
       <img
         class="img03 absolute w-[150vw] h-full max-w-none lawn"
-        src="~/assets/src/newImg03.png"
+        src="../assets/src/newImg03.png"
         alt="Picture 3"
       />
 
