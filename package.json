@@ -5,9 +5,10 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "generate": "nuxt generate",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@nuxt/ui": "^4.1.0",
