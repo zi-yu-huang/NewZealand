@@ -7,7 +7,7 @@ import tripList2 from "../../mock/tripList2";
   <div class="flex flex-col items-center">
     <p class="text-5xl text-white font-serif">Trip Itinerary</p>
     <div class="grid lg:[grid-template-columns:1fr_2fr_1fr]">
-      <img src="../assets/src/newZealand.png" class="order-0 md:order-none" />
+      <img src="/images/trip_itinerary/newZealand.png" class="order-0 md:order-none" />
       <div class="flex flex-col justify-evenly md:order-first">
         <div v-for="i in tripList1" class="py-2 flex justify-center">
           <UBlogPost
