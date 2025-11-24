@@ -1,0 +1,1 @@
+import{_ as t,c as r,o as s,a as o}from"./BfUxJJ62.js";const a={};function n(c,e){return s(),r("div",null,[...e[0]||(e[0]=[o("h3",{class:"text-5xl text-white font-serif"},"Tips for Travelers",-1)])])}const f=t(a,[["render",n]]);export{f as default};
