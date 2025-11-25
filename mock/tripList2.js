@@ -1,7 +1,7 @@
-import RoysPeak from "/images/trip_itinerary/RoysPeak.jpeg";
-import HukaFalls from "/images/trip_itinerary/hukafalls.jpg";
-import CastleHill from "/images/trip_itinerary/CastleHill.jpg";
-import Waitomo from "/images/trip_itinerary/Waitomo.jpeg";
+import RoysPeak from "/images/trip_itinerary/RoysPeak.webp";
+import HukaFalls from "/images/trip_itinerary/hukafalls.webp";
+import CastleHill from "/images/trip_itinerary/CastleHill.webp";
+import Waitomo from "/images/trip_itinerary/Waitomo.webp";
 
 const tripList2 = [
     { src: Waitomo, title: "Waitomo", dis: "Waitomo", city: "North Island" },

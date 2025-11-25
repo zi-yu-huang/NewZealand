@@ -1,9 +1,9 @@
-import mountcook from "/images/highlight_places/mountcook_.png";
-import Church from "/images/highlight_places/tekapo.png";
-import wanakatree from "/images/highlight_places/wanakatree.png";
-import maroi from "/images/highlight_places/maroi.jpeg";
-import Hobbiton from "/images/highlight_places/Hobbiton.jpeg";
-import kiwiPark from "/images/highlight_places/kiwiPark.jpeg";
+import mountcook from "/images/highlight_places/mountcook_.webp";
+import Church from "/images/highlight_places/tekapo.webp";
+import wanakatree from "/images/highlight_places/wanakatree.webp";
+import maroi from "/images/highlight_places/maroi.webp";
+import Hobbiton from "/images/highlight_places/Hobbiton.webp";
+import kiwiPark from "/images/highlight_places/kiwiPark.webp";
 
 
 

@@ -29,13 +29,13 @@ const route = useRoute();
 <template>
   <UHeader class="bg-[#f4e0d8] opacity-[0.9] border-none">
     <template #title>
-      <Logo class="h-6 w-auto" />
+      <!-- <Logo class="h-6 w-auto" /> -->
     </template>
 
-    <UNavigationMenu :items="items" />
+    <!-- <UNavigationMenu :items="items" /> -->
 
     <template #right>
-      <TooltipProvider text="Open on GitHub" :kbds="['meta', 'G']">
+      <!-- <TooltipProvider text="Open on GitHub" :kbds="['meta', 'G']"> -->
         <UButton
           color="neutral"
           variant="ghost"
@@ -44,11 +44,11 @@ const route = useRoute();
           icon="i-simple-icons-github"
           aria-label="GitHub"
         />
-      </TooltipProvider>
+      <!-- </TooltipProvider> -->
     </template>
 
-    <template #body>
+    <!-- <template #body>
       <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
-    </template>
+    </template> -->
   </UHeader>
 </template>
