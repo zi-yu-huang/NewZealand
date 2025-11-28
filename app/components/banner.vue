@@ -43,6 +43,7 @@ const runSequenceAnimation = () => {
       duration: 2,
       x: 0.595 * vw,
       ease: "power2.inOut",
+      style: "text-shadow:rgb(77, 77, 77) 7px 7px 8px",
     },
     "<"
   );
@@ -53,6 +54,7 @@ const runSequenceAnimation = () => {
       duration: 2,
       x: -0.595 * vw,
       ease: "power2.inOut",
+      style: "text-shadow:rgb(77, 77, 77) 7px 7px 8px",
     },
     "<"
   );
@@ -73,6 +75,7 @@ const runSequenceAnimation = () => {
       // 直接使用 opacity 屬性
       opacity: 1,
       ease: "power2.inOut",
+      style: "text-shadow:rgb(77, 77, 77) 7px 7px 8px",
     },
     "<"
   );
@@ -81,7 +84,6 @@ const runSequenceAnimation = () => {
 onMounted(() => {
   runSequenceAnimation();
 });
-
 </script>
 
 <template>
@@ -109,7 +111,9 @@ onMounted(() => {
         alt="Picture 3"
         loading="lazy"
       />
-
+      <div
+        class="absolute inset-x-0 bottom-0 h-1/10 bg-linear-to-t from-[#e6d9d4] to-transparent"
+      ></div>
       <div
         class="relative flex justify-center flex-col items-center h-full font-serif text-white"
       >
@@ -124,7 +128,7 @@ onMounted(() => {
   </div>
 </template>
 
-<style>
+<style scoped>
 .lawn {
   height: 100vh;
   right: -35%;

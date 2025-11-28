@@ -6,13 +6,13 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   ui: {
     theme: {
-      colors: ["primary", "error"],
+      colors: ["primary", "error", "warning", "success", "info", "neutral"],
     },
   },
-  // devServer: {
-  //   host: "0.0.0.0",
-  //   port: 3000,
-  // },
+  devServer: {
+    host: "0.0.0.0",
+    port: 3000,
+  },
   app: {
     baseURL: "/NewZealand/", // ← 你的 repo 名稱
     buildAssetsDir: "/static/",

@@ -14,6 +14,7 @@ const topList = [
     name: "Mount Cook",
     city: "South Island",
     rankstar: 5,
+    link:"https://maps.app.goo.gl/YwzAgo9vP96ypcxr5"
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const topList = [
     name: "Church of the Good Shepherd",
     city: "South Island",
     rankstar: 4,
+    link:"https://maps.app.goo.gl/jGYvPUAaDJutYDoAA"
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const topList = [
     name: "That Wānaka Tree",
     city: "South Island",
     rankstar: 3,
+    link:"https://maps.app.goo.gl/t2xJxDXw9LrJdQX17"
   },
   {
     id: 4,
@@ -35,6 +38,7 @@ const topList = [
     name: "Rotorua",
     city: "North Island",
     rankstar: 4,
+    link:"https://maps.app.goo.gl/pPfEtmG3stY7W97F7"
   },
   {
     id: 5,
@@ -42,6 +46,7 @@ const topList = [
     name: "Hobbiton",
     city: "North Island",
     rankstar: 5,
+    link:"https://maps.app.goo.gl/9mkaHv3AbvZ4dBXF8"
   },
   {
     id: 6,
@@ -49,6 +54,7 @@ const topList = [
     name: "Kiwi Birdlife Park",
     city: "South Island",
     rankstar: 4,
+    link:"https://maps.app.goo.gl/MLtqg59QGB7VGQvs7"
   },
 ];
 export default topList;

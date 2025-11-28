@@ -6,10 +6,11 @@ const props = defineProps({
 
 <template>
   <div
-    class="card-container w-80 h-[548px] relative rounded-lg overflow-hidden cursor-pointer"
+    class="card-container w-78 h-[545px] relative rounded-lg overflow-hidden cursor-pointer"
   >
+  <a :href=props.toplist.link target="_blank">
     <div
-      class="card-image-layer absolute inset-0 bg-cover bg-center transition-transform duration-500"
+      class="card-image-layer absolute inset-0 bg-cover bg-center transition-transform duration-500 "
       :style="{ 'background-image': `url(${props.toplist.src})` }"
     ></div>
 
@@ -36,9 +37,11 @@ const props = defineProps({
         </div>
       </div>
     </div>
+    </a>
   </div>
 </template>
-<style>
+
+<style scoped>
 /* 懸停時，對整個卡片進行縮放 */
 .card-image-layer {
   /* Tailwind 的 transition-transform duration-500 已經涵蓋了這點 */
