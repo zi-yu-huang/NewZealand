@@ -4,7 +4,7 @@ import campsites from "~/components/campsites.vue";
 <template>
   <div class="relative overflow-hidden w-full h-full">
     <div
-      class="absolute inset-x-0 top-0 h-1/10 bg-linear-to-b from-[#7CA2E3] to-transparent lg:h-1/10"
+      class="absolute inset-x-0 top-0 h-1/22 bg-linear-to-b from-[#7CA2E3] to-transparent lg:h-1/10"
       style="z-index: 1"
     ></div>
     <img

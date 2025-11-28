@@ -1,54 +1,5 @@
 <script setup lang="ts">
-const posts_list = ref([
-  {
-    title: "Oamaru TOP10 Holiday Park",
-    image: "/images/campsites/oamaru.jpg",
-    link:"https://maps.app.goo.gl/Sr3Ed5xSFy6n5HNPA",
-    city: "Oamaru",
-    bathroom: 5,
-    kitchen: 4,
-  },
-  {
-    title: "Driftaway Queenstown",
-    image: "/images/campsites/Driftaway.jpg",
-    link:"https://maps.app.goo.gl/wM2jWDUUamjLB5Fr6",
-    city: "Queenstown",
-    kitchen: 5,
-    bathroom: 5,
-  },
-  {
-    title: "Wānaka TOP10 Holiday Park",
-    image: "/images/campsites/Wanaka.jpg",
-    link:"https://maps.app.goo.gl/mKQh6LvSRhpownnK9",
-    city: "Wānaka",
-    kitchen: 5,
-    bathroom: 4,
-  },
-  {
-    title: "Greymouth Seaside Top10 Holiday park",
-    image: "/images/campsites/Greymouth.webp",
-    link:"https://maps.app.goo.gl/hsTPUcn99GNT3Tez5",
-    city: "Greymouth",
-    kitchen: 4,
-    bathroom: 5,
-  },
-  {
-    title: "Tasman Holiday Parks - Christchurch",
-    image: "/images/campsites/Christchurch.webp",
-    link:"https://maps.app.goo.gl/P88tH6XctngPxJbY9",
-    city: "Christchurch",
-    kitchen: 5,
-    bathroom: 5,
-  },
-  {
-    title: "Kaikoura Top10 Holiday Park",
-    image: "/images/campsites/Kaikoura.jpg",
-    link:"https://maps.app.goo.gl/uEhuJLEGHoDS4yoN6",
-    city: "Kaikoura",
-    kitchen: 4,
-    bathroom: 5,
-  },
-]);
+import posts_list from  "../../mock/campsites";
 </script>
 
 <template>
