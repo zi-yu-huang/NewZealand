@@ -6,7 +6,7 @@ const props = defineProps({
 
 <template>
   <div
-    class="card-container w-78 h-[545px] relative rounded-lg overflow-hidden cursor-pointer"
+    class="card-container w-78 h-[545px] relative rounded-lg overflow-hidden cursor-pointer lg:w-68 lg:h-[470px] xl:w-75 xl:h-[525px]" 
   >
   <a :href=props.toplist.link target="_blank">
     <div

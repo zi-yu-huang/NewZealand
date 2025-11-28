@@ -11,18 +11,18 @@ import topList from "../../mock/topList.js";
       v-slot="{ item }"
       :items="topList"
       :ui="{
-        item: 'basis-full md:basis-1/2 lg:basis-1/4 flex justify-center',
+        item: 'basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4 flex justify-center',
       }"
       class="w-full max-w-full mx-auto"
-      slidesToScroll=1
+      slidesToScroll="1"
       arrows
       indicators
       dots
-      
     >
-      <div class="w-80">
+      <div class="w-78 h-full ">
         <Card :toplist="item" />
       </div>
     </UCarousel>
   </div>
 </template>
+<style scoped></style>

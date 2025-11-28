@@ -135,17 +135,17 @@ onMounted(() => {
   transform: translateY(-50%);
   scale: 120%;
 }
-@media screen and (min-width: 820px) {
+@media screen and (min-width: 1025px) {
   .lawn {
     top: 58%;
   }
   .title-all {
-    font-size: 100px;
+    font-size: 80px;
     /* 初始設置透明度為 0 */
     opacity: 0;
   }
   .title-font {
-    font-size: 190px;
+    font-size: 170px;
     margin: -85px 0 -90px 0;
   }
 }
@@ -173,6 +173,21 @@ onMounted(() => {
   }
   .title-all {
     font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 821px) and (max-width: 1024px) {
+  .lawn {
+    top: 50%;
+  }
+  .title-all {
+    font-size: 60px;
+    /* 初始設置透明度為 0 */
+    opacity: 0;
+  }
+  .title-font {
+    font-size: 140px;
+    margin: -60px 0 -65px 0;
   }
 }
 </style>
