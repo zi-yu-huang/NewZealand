@@ -5,7 +5,7 @@ import topList from "../../mock/topList.js";
 const isMobile = ref(false);
 if (process.client) {
   const checkIsMobile = () => {
-    isMobile.value = window.innerWidth <= 768;
+    isMobile.value = window.innerWidth <= 1000;
   };
 
   checkIsMobile();
