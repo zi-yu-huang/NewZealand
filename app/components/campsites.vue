@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import posts_list from  "../../mock/campsites";
+import posts_list from "../../mock/campsites";
 </script>
 
 <template>
@@ -10,13 +10,15 @@ import posts_list from  "../../mock/campsites";
           :image="i.image"
           class="card_shadow"
           orientation="horizontal"
+          loading="lazy"
+          :alt="i.title"
           :title="i.title"
-          :ui="{header:'h-full'}"
+          :ui="{ header: 'h-full' }"
           :to="i.link"
         >
           <template #description>
-            <div >
-              <p class="text-[20px] text-gray-600 dark:text-white">
+            <div>
+              <p class="text-[16px] text-gray-500 dark:text-white">
                 {{ i.city }}
               </p>
 
@@ -57,7 +59,7 @@ import posts_list from  "../../mock/campsites";
         </UBlogPost>
       </div>
     </div>
-    <div class="self-center mt-10">
+    <div class="self-center mt-10 flex gap-4">
       <UButton
         active
         color="neutral"
@@ -65,9 +67,22 @@ import posts_list from  "../../mock/campsites";
         active-color="neutral"
         active-variant="solid"
         target="_blank"
+        trailing-icon="i-lucide-arrow-right"
         to="https://www.notion.so/2b8405d0e09b80a99d44cf759015ff60"
       >
         查看全部營地評分
+      </UButton>
+      <UButton
+        active
+        color="neutral"
+        variant="outline"
+        active-color="neutral"
+        active-variant="solid"
+        target="_blank"
+        trailing-icon="i-lucide-arrow-right"
+        to="https://www.notion.so/2b8405d0e09b80a99d44cf759015ff60"
+      >
+        想看更完整攻略
       </UButton>
     </div>
   </div>

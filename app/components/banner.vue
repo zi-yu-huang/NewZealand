@@ -43,7 +43,7 @@ const runSequenceAnimation = () => {
       duration: 2,
       x: 0.595 * vw,
       ease: "power2.inOut",
-      style: "text-shadow:rgb(77, 77, 77) 7px 7px 8px",
+      style: "text-shadow:rgb(17 17 17) 8px 10px 10px",
     },
     "<"
   );
@@ -54,7 +54,7 @@ const runSequenceAnimation = () => {
       duration: 2,
       x: -0.595 * vw,
       ease: "power2.inOut",
-      style: "text-shadow:rgb(77, 77, 77) 7px 7px 8px",
+      style: "text-shadow:rgb(17 17 17) 8px 10px 10px",
     },
     "<"
   );
@@ -75,7 +75,15 @@ const runSequenceAnimation = () => {
       // 直接使用 opacity 屬性
       opacity: 1,
       ease: "power2.inOut",
-      style: "text-shadow:rgb(77, 77, 77) 7px 7px 8px",
+      style: "text-shadow:rgb(17 17 17) 8px 10px 10px",
+    },
+    "<"
+  );
+  tl.to(
+    ".hero",
+    {
+      style:
+        "height:100%;  background: linear-gradient(to top, rgba(230, 217, 212, 0.4), transparent);",
     },
     "<"
   );
@@ -111,9 +119,7 @@ onMounted(() => {
         alt="Picture 3"
         loading="lazy"
       />
-      <div
-        class="absolute inset-x-0 bottom-0 h-1/10 bg-linear-to-t from-[#e6d9d4] to-transparent"
-      ></div>
+      <div class="hero"></div>
       <div
         class="relative flex justify-center flex-col items-center h-full font-serif text-white"
       >
@@ -134,6 +140,14 @@ onMounted(() => {
   right: -35%;
   transform: translateY(-50%);
   scale: 120%;
+}
+.hero {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10%;
+  background: linear-gradient(to top, #e6d9d4, transparent);
 }
 @media screen and (min-width: 1025px) {
   .lawn {

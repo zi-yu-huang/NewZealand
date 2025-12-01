@@ -37,7 +37,7 @@ const handleNavigationClick = (event: MouseEvent) => {
 </script>
 
 <template>
-  <UHeader class="bg-[#f4e0d8] opacity-[0.9] border-none">
+  <UHeader toggle-side="left" class="bg-[#f4e0d8] opacity-[0.9] border-none">
     <template #title>
       <p class="h-6 w-auto">NewZealand</p>
     </template>
@@ -54,8 +54,13 @@ const handleNavigationClick = (event: MouseEvent) => {
         aria-label="GitHub"
       />
     </template>
+    <template #body>
+        <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+      </template>
   </UHeader>
 </template>
 <style scoped>
 
 </style>
+
+
