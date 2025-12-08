@@ -8,17 +8,7 @@ const isDesktop = ref(true);
 const OpenModel = () => {
   isVisible.value = !isVisible.value;
 };
-const CheckWindowSize = () => {
-  const vw = window.innerWidth;
-  isDesktop.value = vw > 720;
-};
-onMounted(() => {
-  CheckWindowSize();
-  window.addEventListener("resize", CheckWindowSize);
-});
-onUnmounted(() => {
-  window.removeEventListener("resize", CheckWindowSize);
-});
+
 </script>
 
 <template>
@@ -55,7 +45,7 @@ onUnmounted(() => {
 .form-container {
   z-index: 99;
   width: 400px;
-  height: 600px;
+  height: 550px;
   position: fixed;
   bottom: 80px;
   right: 10px;
@@ -68,5 +58,13 @@ onUnmounted(() => {
 .form-container.is-open {
   transform: translateY(0);
   pointer-events: auto;
+}
+@media screen and ( max-width: 768px){
+  .form-container{
+    width: 90%;
+  height: 85%;
+    bottom: 80px;
+  right: 10px;
+  }
 }
 </style>

@@ -69,7 +69,9 @@ const GetAiChatApi = async () => {
 };
 </script>
 <template>
-  <div class="form-style bg-[#fffdf0] rounded-lg">
+  <div
+    class="form-style bg-[#fffdf0] rounded-lg grid grid-rows-[auto_1fr_auto]"
+  >
     <div
       class="grid grid-cols-[1fr_auto] items-center h-[65px] bg-[#8e8869] p-4 rounded-t-lg"
     >
@@ -83,7 +85,7 @@ const GetAiChatApi = async () => {
         @click="closeModal"
       />
     </div>
-    <div class="py-4 px-2 h-[500px] overflow-y-scroll">
+    <div class="py-4 px-2 overflow-y-scroll">
       <UChatMessages
         :assistant="{
           side: 'left',
@@ -102,9 +104,8 @@ const GetAiChatApi = async () => {
       @keydown.enter="onSubmit"
       :ui="{ root: 'rounded-none rounded-b-lg' }"
     >
-      <UChatPromptSubmit
-        class="bg-[#8e8869] hover:bg-[#fffdf0] hover:text-[#8e8869] active:bg-[#fffdf0]"
-      />
+      <UChatPromptSubmit @click="onSubmit" class="bg-[#8e8869]
+      hover:bg-[#fffdf0] hover:text-[#8e8869] active:bg-[#fffdf0]" />
     </UChatPrompt>
   </div>
 </template>
