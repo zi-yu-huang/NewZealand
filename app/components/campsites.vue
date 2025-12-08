@@ -15,6 +15,7 @@ import posts_list from "../../mock/campsites";
           :title="i.title"
           :ui="{ header: 'h-full' }"
           :to="i.link"
+          target="_blank"
         >
           <template #description>
             <div>

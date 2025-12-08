@@ -34,33 +34,32 @@ const handleNavigationClick = (event: MouseEvent) => {
     ScrollToSection(sectionId);
   }
 };
+const goHome = () => {
+  window.location.href = "https://zi-yu-huang.github.io/";
+};
 </script>
 
 <template>
   <UHeader toggle-side="left" class="bg-[#f4e0d8] opacity-[0.9] border-none">
     <template #title>
-      <p class="h-6 w-auto">NewZealand</p>
+      <div @click="goHome" class="cursor-pointer flex items-end gap-1.5">
+        <img
+          src="/images/myLogo.png"
+          alt="Logo"
+          loading="lazy"
+          class="w-[100px]"
+        />
+      </div>
     </template>
 
     <UNavigationMenu :items="items" @click.stop="handleNavigationClick" />
 
     <template #right>
-      <UButton
-        color="neutral"
-        variant="ghost"
-        to="https://github.com/zi-yu-huang"
-        target="_blank"
-        icon="i-simple-icons-github"
-        aria-label="GitHub"
-      />
+      <p class="h-6 w-auto font-bold">NewZealand</p>
     </template>
     <template #body>
-        <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
-      </template>
+      <UNavigationMenu :items="items" orientation="vertical" class="-mx-2.5" />
+    </template>
   </UHeader>
 </template>
-<style scoped>
-
-</style>
-
-
+<style scoped></style>
