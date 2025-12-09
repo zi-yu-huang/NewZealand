@@ -16,5 +16,12 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/NewZealand/", // ← 你的 repo 名稱
     buildAssetsDir: "/static/",
+    head: {
+      title: 'NewZealand旅遊網站', // 設置預設網頁標題
+      link: [
+        // 設置 Favicon，文件應放在 public/favicon.ico
+        { rel: 'icon', type: 'image/x-icon', href: '/myLogo.png' } 
+      ]
+    }
   },
 });

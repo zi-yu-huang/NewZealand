@@ -43,7 +43,7 @@ const messages = ref([
     parts: [
       {
         type: "text",
-        text: "您好，關於紐西蘭的問題都可以問我！初次問答需要等比較久ＱＱ",
+        text: "您好，關於紐西蘭的問題都可以問我！我太久沒被問，正在努力喚醒中😥，這次會等比較久喔！",
       },
     ],
   },
@@ -54,12 +54,27 @@ const closeModal = () => {
 };
 
 const onSubmit = async (event) => {
-  if (event.isComposing) return; //判斷中文字
-  userInput.value = input.value;
-  input.value = "";
-  await putMessage("user");
-  await GetAiChatApi();
+  event.preventDefault(); 
+  if (input.value) {
+    if (event.isComposing) return; //判斷中文字
+    userInput.value = input.value;
+    input.value = "";
+    await putMessage("user");
+    await GetAiChatApi();
+  }
 };
+
+const chatRef = ref();
+// 自動滾動
+watch(
+  () => messages.value.length,
+  async () => {
+    await nextTick();
+    if (chatRef.value) {
+      chatRef.value.scrollTop = chatRef.value.scrollHeight;
+    }
+  }
+);
 // AI chat API
 const GetAiChatApi = async () => {
   const res = await AiChatApi({ message: userInput.value });
@@ -85,7 +100,7 @@ const GetAiChatApi = async () => {
         @click="closeModal"
       />
     </div>
-    <div class="py-4 px-2 overflow-y-scroll">
+    <div ref="chatRef" class="py-4 px-2 overflow-y-scroll">
       <UChatMessages
         :assistant="{
           side: 'left',
@@ -97,15 +112,19 @@ const GetAiChatApi = async () => {
         :messages="messages"
       />
     </div>
+
     <UChatPrompt
       variant="soft"
+      placeholder="問問關於紐西蘭🥰"
       v-model="input"
       class="bg-[#dfd9ba]"
       @keydown.enter="onSubmit"
       :ui="{ root: 'rounded-none rounded-b-lg' }"
     >
-      <UChatPromptSubmit @click="onSubmit" class="bg-[#8e8869]
-      hover:bg-[#fffdf0] hover:text-[#8e8869] active:bg-[#fffdf0]" />
+      <UChatPromptSubmit
+        @click="onSubmit"
+        class="bg-[#8e8869] hover:bg-[#fffdf0] hover:text-[#8e8869] active:bg-[#fffdf0]"
+      />
     </UChatPrompt>
   </div>
 </template>
