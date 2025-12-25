@@ -4,18 +4,21 @@ import { gsap } from "gsap";
 
 const runSequenceAnimation = () => {
   const vw = window.innerWidth;
+  const isMobile = window.innerWidth < 768;
   const tl = gsap.timeline({
     defaults: {
       ease: "power2.inOut",
       force3D: true,
     },
   });
-
-  // 圖片
-  tl.to(".img01", { x: "-20vw", duration: 1.5 })
-    .to(".img02", { x: "10vw", duration: 1.5 }, "<")
-    .to(".img03", { x: "-10vw", duration: 1.5 }, "<");
-
+  if (!isMobile) {
+    // 圖片
+    tl.to(".img01", { x: "-20vw", duration: 1.5 })
+      .to(".img02", { x: "10vw", duration: 1.5 }, "<")
+      .to(".img03", { x: "-10vw", duration: 1.5 }, "<");
+  } else {
+    tl.to(".img02", { x: "10vw", duration: 1.5 });
+  }
   // 標題
   tl.to(".title_new", { x: 0.595 * vw, duration: 2 }, "<").to(
     ".title_zealand",
@@ -59,7 +62,6 @@ onMounted(() => {
         style="top: -9%"
         src="/images/banner_img/newImg01.webp"
         alt="Picture 1"
-        loading="lazy"
       />
 
       <img
@@ -67,14 +69,12 @@ onMounted(() => {
         style="top: 56%; left: -35%; transform: translateY(-50%); scale: 120%"
         src="/images/banner_img/newImg02.webp"
         alt="Picture 2"
-        loading="lazy"
       />
 
       <img
         class="img03 absolute w-[150vw] h-full max-w-none lawn"
         src="/images/banner_img/newImg03.webp"
         alt="Picture 3"
-        loading="lazy"
       />
       <div class="hero"></div>
       <div
