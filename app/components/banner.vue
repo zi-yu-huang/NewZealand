@@ -3,82 +3,31 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 
 const runSequenceAnimation = () => {
-  const tl = gsap.timeline();
-  // 獲取視窗寬度
   const vw = window.innerWidth;
-
-  // -------------------------
-  // 移動 - 初始動畫
-  // -------------------------
-  tl.to([".img01"], {
-    duration: 1.5,
-    x: "-20vw",
-    ease: "power2.inOut",
+  const tl = gsap.timeline({
+    defaults: {
+      ease: "power2.inOut",
+      force3D: true,
+    },
   });
-  tl.to(
-    [".img02"],
-    {
-      duration: 1.5,
-      x: "10vw",
-      ease: "power2.inOut",
-    },
-    "<"
-  );
-  tl.to(
-    [".img03"],
-    {
-      duration: 1.5,
-      x: "-10vw",
-      ease: "power2.inOut",
-    },
-    "<"
-  );
 
-  // 假設原程式碼中 pic1 為 img01，如果 pic1 真的存在，請自行調整
-  // tl.to( ".pic1", { ... } );
+  // 圖片
+  tl.to(".img01", { x: "-20vw", duration: 1.5 })
+    .to(".img02", { x: "10vw", duration: 1.5 }, "<")
+    .to(".img03", { x: "-10vw", duration: 1.5 }, "<");
 
-  tl.to(
-    ".title_new",
-    {
-      duration: 2,
-      x: 0.595 * vw,
-      ease: "power2.inOut",
-      style: "text-shadow:rgb(17 17 17) 8px 10px 10px",
-    },
-    "<"
-  );
-
-  tl.to(
+  // 標題
+  tl.to(".title_new", { x: 0.595 * vw, duration: 2 }, "<").to(
     ".title_zealand",
-    {
-      duration: 2,
-      x: -0.595 * vw,
-      ease: "power2.inOut",
-      style: "text-shadow:rgb(17 17 17) 8px 10px 10px",
-    },
+    { x: -0.595 * vw, duration: 2 },
     "<"
   );
 
-  // -------------------------
-  // 縮放與透明度 - 第二組動畫
-  // -------------------------
-  tl.to([".img02", ".img03"], {
-    filter: "grayscale(35%)",
-    duration: 0.9,
-    scale: 1,
-    opacity: 0.9,
-  });
-  tl.to(
-    [".title_my", ".title_journey"],
-    {
-      duration: 1,
-      // 直接使用 opacity 屬性
-      opacity: 1,
-      ease: "power2.inOut",
-      style: "text-shadow:rgb(17 17 17) 8px 10px 10px",
-    },
-    "<"
-  );
+  // 文字
+  tl.to([".title_my", ".title_journey"], { opacity: 1, duration: 1 }, "-=0.8");
+
+  // 圖片縮放（移除 filter）
+  tl.to([".img02", ".img03"], { scale: 1, opacity: 0.9, duration: 0.9 }, "<");
   tl.to(
     ".hero",
     {
@@ -87,6 +36,14 @@ const runSequenceAnimation = () => {
     },
     "<"
   );
+  // class 切換
+  tl.add(() => {
+    document
+      .querySelectorAll(".title_new, .title_zealand, .title_my, .title_journey")
+      .forEach((el) => el.classList.add("text-shadow"));
+
+    document.querySelector(".hero")?.classList.add("hero-expand");
+  }, "<");
 };
 
 onMounted(() => {
@@ -135,6 +92,25 @@ onMounted(() => {
 </template>
 
 <style scoped>
+/* GPU 提示 */
+.img01,
+.img02,
+.img03,
+.title_new,
+.title_zealand {
+  will-change: transform, opacity;
+}
+
+/* 文字陰影 */
+.text-shadow {
+  text-shadow: rgb(17 17 17) 8px 10px 10px;
+}
+
+/* hero 展開 */
+.hero-expand {
+  height: 100%;
+}
+
 .lawn {
   height: 100vh;
   right: -35%;
